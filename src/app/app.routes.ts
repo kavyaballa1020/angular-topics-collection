@@ -24,7 +24,7 @@ export const routes: Routes = [
     ]
   },
   { path: 'calculator', component: CalculatorComponent },
-  { path: 'services', component: UserListComponent },
+  { path: 'services', component: UserListComponent,canActivate:[AuthGuard] },
   { path: 'login', component: LoginComponent },
   {path:'ngdirectives' , component:NgdirectivesComponent,
     children:[
