@@ -11,8 +11,9 @@ import { DataService } from '../../services/user.service';
 })
 export class UserListComponent {
   users: any[] = [];
-
+  names:string[]=[];
   constructor(private readonly dataService: DataService) {
     this.users = this.dataService.getData();
+    this.names=this.dataService.getArray();
   }
 }

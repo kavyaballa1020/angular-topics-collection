@@ -13,4 +13,7 @@ export class DataService {
       { id: 3, name: 'Kavya' }, 
     ];
   }
+  getArray(){
+    return ["Nanna","Minnu","Kavya"];
+  }
 }
