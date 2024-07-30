@@ -1,6 +1,6 @@
+import { ChildComponent } from './../child/child.component';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { ChildComponent } from '../child/child.component';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-parent',
@@ -16,5 +16,16 @@ export class ParentComponent {
 
       receiveMessage(event:string){
           this.message=event
+      }
+
+      @ViewChild (ChildComponent) childComponent!:ChildComponent;
+
+
+      viewmessage:string=''
+      ngAfterViewInit(){
+
+      }
+      callchildmethod(){
+        this.viewmessage=this.childComponent.logmessage();
       }
 }
