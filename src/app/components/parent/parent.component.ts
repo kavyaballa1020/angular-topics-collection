@@ -11,4 +11,10 @@ import { ChildComponent } from '../child/child.component';
 })
 export class ParentComponent {
       data:string="Hi Child i am your parent";
+
+      message:string='';
+
+      receiveMessage(event:string){
+          this.message=event
+      }
 }

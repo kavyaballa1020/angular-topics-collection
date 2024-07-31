@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component,Input } from '@angular/core';
+import { Component,Input,EventEmitter,Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -10,4 +10,11 @@ import { Component,Input } from '@angular/core';
 })
 export class ChildComponent {
       @Input() data!:string;
+
+
+      @Output() messageEvent=new EventEmitter<string>();
+
+      sendmessage(){
+        this.messageEvent.emit("Hello from child component")
+      }
 }

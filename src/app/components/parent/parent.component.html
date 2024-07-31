@@ -1,1 +1,3 @@
-<app-child [data]="data"></app-child>
+<app-child (messageEvent)="receiveMessage($event)" [data]="data"></app-child>
+
+<h1>Message from child : {{message}}</h1>
