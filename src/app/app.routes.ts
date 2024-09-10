@@ -12,6 +12,7 @@ import { NgstyleComponent } from './components/ngstyle/ngstyle.component';
 import { NgdirectivesComponent } from './components/ngdirectives/ngdirectives.component';
 import { NgforComponent } from './components/ngfor/ngfor.component';
 import { CustomerlistComponent } from './components/customer-list/customer-list.component';
+import { ParentComponent } from './components/parent/parent.component';
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   {
@@ -32,5 +33,6 @@ export const routes: Routes = [
     ]
   },
   {path:'ngforloop',component:NgforComponent},
-  {path:'customer',component:CustomerlistComponent}
+  {path:'customer',component:CustomerlistComponent},
+  {path:'parent', component:ParentComponent}
 ];
