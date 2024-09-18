@@ -10,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class IfelseComponent {
         role:number=2
+        isVisible:Boolean=false
+
+        togglevisibility():void{
+          this.isVisible=!this.isVisible
+        }
 }
