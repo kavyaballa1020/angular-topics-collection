@@ -9,6 +9,7 @@ import { BindingComponent } from './components/binding/binding.component'; // Pa
 import { AuthGuard } from './guards/auth.guard';
 import { IfelseComponent } from './components/ifelse/ifelse.component';
 import { NgstyleComponent } from './components/ngstyle/ngstyle.component';
+import { NgdirectivesComponent } from './components/ngdirectives/ngdirectives.component';
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   {
@@ -22,6 +23,10 @@ export const routes: Routes = [
   { path: 'calculator', component: CalculatorComponent },
   { path: 'services', component: UserListComponent },
   { path: 'login', component: LoginComponent },
-  {path:'ifelse',component:IfelseComponent},
-  {path:'ngstyle',component:NgstyleComponent}
+  {path:'ngdirectives' , component:NgdirectivesComponent,
+    children:[
+      {path:'ifelse',component:IfelseComponent},
+      {path:'ngStyle',component:NgstyleComponent}
+    ]
+  }
 ];

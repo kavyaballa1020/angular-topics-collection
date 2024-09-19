@@ -8,5 +8,5 @@ import { RouterModule } from '@angular/router';
   styleUrl: './binding.component.css'
 })
 export class BindingComponent {
-    title='Children Routes'
+    title='Binding is two types'
 }
