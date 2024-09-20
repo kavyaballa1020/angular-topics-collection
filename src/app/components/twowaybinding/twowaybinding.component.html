@@ -1,2 +1,9 @@
-<p>twowaybinding works!</p> 
-<h1>hello world</h1> 
+<input type="number" placeholder="Enter the First Number" [(ngModel)]="a">
+<input type="number" placeholder="Enter the Second Number" [(ngModel)]="b">
+<button (click)="add()">add</button>
+
+<h3>Result: {{result}}</h3>
+
+<input type="text" [(ngModel)]="name" placeholder="Enter your name" />
+
+<h3>Your Name is : {{name}}</h3>

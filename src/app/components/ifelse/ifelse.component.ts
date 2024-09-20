@@ -1,9 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-ifelse',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './ifelse.component.html',
   styleUrl: './ifelse.component.css'
 })
