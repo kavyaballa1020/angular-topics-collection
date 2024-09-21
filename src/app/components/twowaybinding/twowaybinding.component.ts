@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './twowaybinding.component.css'
 })
 export class TwowaybindingComponent {
+  
+    
+      chk:Boolean=false
+
+      role:number=3
 
 }

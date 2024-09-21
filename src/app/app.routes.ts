@@ -7,7 +7,7 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { BindingComponent } from './components/binding/binding.component'; // Parent component
 import { AuthGuard } from './guards/auth.guard';
-
+import { IfelseComponent } from './components/ifelse/ifelse.component';
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   {
@@ -20,5 +20,6 @@ export const routes: Routes = [
   },
   { path: 'calculator', component: CalculatorComponent },
   { path: 'services', component: UserListComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  {path:'ifelse',component:IfelseComponent}
 ];

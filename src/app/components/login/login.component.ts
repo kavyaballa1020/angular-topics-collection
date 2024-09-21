@@ -21,7 +21,7 @@ export class LoginComponent {
 
     if (this.username === validUsername && this.password === validPassword) {
       localStorage.setItem('isLoggedIn', 'true');
-      this.router.navigate(['/twowaybinding']);
+      this.router.navigate(['binding/twowaybinding']);
     } else {
       alert('Invalid username or password!');
     }
