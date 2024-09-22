@@ -1,0 +1,23 @@
+<h2>{{ title }}</h2>
+<nav>
+    <a routerLink="onewaybinding" routerLinkActive="active">One-Way Binding</a>
+    <a routerLink="twowaybinding" routerLinkActive="active">Two-Way Binding</a>
+</nav>
+<router-outlet></router-outlet>
+
+<style>
+    nav {
+        margin-bottom: 20px;
+    }
+
+    a {
+        margin-right: 15px;
+        text-decoration: none;
+        color: blue;
+        font-size: large;
+    }
+
+    a:hover {
+        color: rgb(139, 74, 0);
+    }
+</style>
