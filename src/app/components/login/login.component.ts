@@ -1,20 +1,29 @@
-// src/app/login/login.component.ts
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../../services/auth.service';
+import { FormsModule } from '@angular/forms'; 
+
 @Component({
   selector: 'app-login',
+  standalone: true,
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  imports: [FormsModule] 
 })
 export class LoginComponent {
-  
-  constructor(private authService: AuthService, private router: Router) {}
+  username: string = '';
+  password: string = '';
+
+  constructor(private router: Router) {}
 
   login() {
-    // Perform your login logic here
-    // For demonstration, we're just adding a user to localStorage
-    localStorage.setItem('user', 'authenticated');
-    this.router.navigate(['/twowaybinding']); // Redirect to two way binding after login
+    const validUsername = 'nanna';
+    const validPassword = '12345';
+
+    if (this.username === validUsername && this.password === validPassword) {
+      localStorage.setItem('isLoggedIn', 'true');
+      this.router.navigate(['/twowaybinding']);
+    } else {
+      alert('Invalid username or password!');
+    }
   }
 }
