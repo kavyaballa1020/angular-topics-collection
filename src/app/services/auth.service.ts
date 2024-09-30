@@ -9,7 +9,10 @@ export class AuthService {
   constructor() {}
 
   isLoggedIn(): boolean {
-    // Replace this with your actual authentication logic
-    return !!localStorage.getItem('user'); // Example: check if user is stored in localStorage
+    // Check if the code is running in the browser
+    if (typeof window !== 'undefined') {
+      return !!localStorage.getItem('user'); // Check localStorage only in the browser
+    }
+    return false; // Return false if not in the browser
   }
 }
