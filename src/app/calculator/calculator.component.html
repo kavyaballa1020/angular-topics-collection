@@ -1,1 +1,16 @@
-<p>calculator works!</p>
+<h1>Calculator</h1>
+<div>
+    <input type="number" #a placeholder="Enter first Number" />
+    <input type="number" #b placeholder="Enter Second Number" />
+</div>
+
+<br />
+
+<div>
+    <button (click)="addition(a.value, b.value)">Addition</button>
+    <button (click)="substraction(a.value, b.value)">Subtraction</button>
+    <button (click)="multiplication(a.value, b.value)">Multiplication</button>
+    <button (click)="Division(a.value, b.value)">Division</button>
+</div>
+
+<h3>Result: {{ result }}</h3>
