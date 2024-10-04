@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './onewaybinding.component.css'
 })
 export class OnewaybindingComponent {
+  name:string="Kavya"
+  isDisable:boolean=true
+  urlimage:string='/src/assests/Kavya.JPG'
 
+  Disable():void{
+    this.isDisable=!this.isDisable
+  }
 }
