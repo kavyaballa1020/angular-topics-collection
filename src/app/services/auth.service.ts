@@ -1,3 +1,4 @@
+// src/app/auth.service.ts
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,10 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  constructor() { }
+  constructor() {}
+
+  isLoggedIn(): boolean {
+    // Replace this with your actual authentication logic
+    return !!localStorage.getItem('user'); // Example: check if user is stored in localStorage
+  }
 }
