@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class NgstyleComponent {
   
-  x: number =0
+  x: number =1
 
   getColor(): string {
     switch(this.x) {
