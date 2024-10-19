@@ -1,0 +1,51 @@
+<div>
+    <h1>Customer List</h1>
+
+    <form (ngSubmit)="onUpdate()">
+        <label>
+            Name: <input [(ngModel)]="selectedCustomer.name" name="name" required />
+        </label><br />
+        <label>
+            Address: <input [(ngModel)]="selectedCustomer.address" name="address" required />
+        </label><br />
+        <label>
+            City: <input [(ngModel)]="selectedCustomer.city" name="city" required />
+        </label><br />
+        <label>
+            State: <input [(ngModel)]="selectedCustomer.state" name="state" required />
+        </label><br />
+        <label>
+            Country: <input [(ngModel)]="selectedCustomer.country" name="country" required />
+        </label><br />
+
+        <button type="submit">{{ isEdit ? 'Update' : 'Add' }}</button>
+        <button type="button" (click)="resetForm()">Reset</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Country</th>
+                <th>Edit</th>
+                <th>Delete</th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let customer of customers">
+                <td>{{ customer.no }}</td>
+                <td>{{ customer.name }}</td>
+                <td>{{ customer.address }}</td>
+                <td>{{ customer.city }}</td>
+                <td>{{ customer.state }}</td>
+                <td>{{ customer.country }}</td>
+                <td><button (click)="onEdit(customer)">Edit</button></td>
+                <td><button (click)="onDelete(customer.no)">Delete</button></td> 
+            </tr>
+        </tbody>
+    </table>
+</div>

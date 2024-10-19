@@ -10,6 +10,8 @@ import { AuthGuard } from './guards/auth.guard';
 import { IfelseComponent } from './components/ifelse/ifelse.component';
 import { NgstyleComponent } from './components/ngstyle/ngstyle.component';
 import { NgdirectivesComponent } from './components/ngdirectives/ngdirectives.component';
+import { NgforComponent } from './components/ngfor/ngfor.component';
+import { CustomerlistComponent } from './components/customer-list/customer-list.component';
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   {
@@ -28,5 +30,7 @@ export const routes: Routes = [
       {path:'ifelse',component:IfelseComponent},
       {path:'ngStyle',component:NgstyleComponent}
     ]
-  }
+  },
+  {path:'ngforloop',component:NgforComponent},
+  {path:'customer',component:CustomerlistComponent}
 ];
