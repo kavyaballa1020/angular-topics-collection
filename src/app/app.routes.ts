@@ -13,26 +13,31 @@ import { NgdirectivesComponent } from './components/ngdirectives/ngdirectives.co
 import { NgforComponent } from './components/ngfor/ngfor.component';
 import { CustomerlistComponent } from './components/customer-list/customer-list.component';
 import { ParentComponent } from './components/parent/parent.component';
+import { StudentListComponent } from './components/student-list/student-list.component';
+
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   {
-    path: 'binding', 
-    component: BindingComponent, 
+    path: 'binding',
+    component: BindingComponent,
     children: [
       { path: 'onewaybinding', component: OnewaybindingComponent },
       { path: 'twowaybinding', component: TwowaybindingComponent, canActivate: [AuthGuard] }
     ]
   },
   { path: 'calculator', component: CalculatorComponent },
-  { path: 'services', component: UserListComponent,canActivate:[AuthGuard] },
+  { path: 'services', component: UserListComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
-  {path:'ngdirectives' , component:NgdirectivesComponent,
-    children:[
-      {path:'ifelse',component:IfelseComponent},
-      {path:'ngStyle',component:NgstyleComponent}
+  {
+    path: 'ngdirectives',
+    component: NgdirectivesComponent,
+    children: [
+      { path: 'ifelse', component: IfelseComponent },
+      { path: 'ngStyle', component: NgstyleComponent }
     ]
   },
-  {path:'ngforloop',component:NgforComponent},
-  {path:'customer',component:CustomerlistComponent},
-  {path:'parent', component:ParentComponent}
+  { path: 'ngforloop', component: NgforComponent },
+  { path: 'customer', component: CustomerlistComponent },
+  { path: 'parent', component: ParentComponent },
+  { path: 'student', component: StudentListComponent }
 ];
