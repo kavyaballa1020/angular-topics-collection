@@ -1,29 +1,55 @@
-<nav>
-  <a routerLink="/" routerLinkActive="active">Home</a>
-  <a routerLink="/binding" routerLinkActive="active">Binding</a>
-  <a routerLink="/calculator" routerLinkActive="active">Calculator</a>
-  <a routerLink="/services" routerLinkActive="active">Services</a>
-  <a routerLink="/customer" routerLinkActive="active">Customer List</a>
-  <a routerLink="/ngdirectives" routerLinkActive="active">Ng Directives</a>
-  <a routerLink="/parent" routerLinkActive="active">Communication</a>
-  <a routerLink="/student" routerLinkActive="active">Student</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/">MyApp</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" routerLinkActive="active">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/binding" routerLinkActive="active">Binding</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/calculator" routerLinkActive="active">Calculator</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/services" routerLinkActive="active">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/customer" routerLinkActive="active">Customer List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/ngdirectives" routerLinkActive="active">Ng Directives</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/parent" routerLinkActive="active">Communication</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/student" routerLinkActive="active">Student</a>
+      </li>
+    </ul>
+  </div>
 </nav>
 
 <router-outlet></router-outlet>
 
 <style>
-  nav {
-    margin-bottom: 20px;
-  }
-
-  a {
-    margin-right: 15px;
-    text-decoration: none;
-    color: blue;
+  .navbar-nav .nav-link {
+    margin-right: 10px;
     font-size: large;
+    color: blue;
   }
 
-  a:hover {
+  .navbar-nav .nav-link.active {
+    font-weight: bold;
     color: rgb(139, 74, 0);
   }
+
+  .navbar-nav .nav-link:hover {
+    color: darkorange;
+  }
 </style>
+<app-employee></app-employee>

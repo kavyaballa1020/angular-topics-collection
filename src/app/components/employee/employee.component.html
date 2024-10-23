@@ -1,0 +1,40 @@
+<!-- employee.component.html -->
+<div>
+    <h1>Employee Information</h1>
+    <button (click)="loadEmployeeData()">Load Employee Data</button>
+
+    <table *ngIf="employees.length > 0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <td>{{ employee.id }}</td>
+                <td>{{ employee.name }}</td>
+                <td>{{ employee.age }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div *ngIf="employees.length === 0">
+        <p>No employee data available.</p>
+    </div>
+</div>
+<h2>Add New Employee</h2>
+<form (ngSubmit)=" addemployeedata()">
+    <input type="number" [(ngModel)]="newemployee.id" name="id" placeholder="ID" required>
+    <input type="text" [(ngModel)]="newemployee.name" name="name" placeholder="Name" required>
+    <input type="number" [(ngModel)]="newemployee.age" name="age" placeholder="Age" required>
+    <button type="submit">Add Employee</button>
+
+    <h2>Delete Employee</h2>
+    <form (ngSubmit)="deleteemployeedata()">
+        <input type="number" [(ngModel)]="newemployee.id" name="id" placeholder="ID (existing)" required>
+        <button type="submit">Delete Employee</button>
+    </form>
+
+</form>

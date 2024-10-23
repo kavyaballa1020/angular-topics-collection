@@ -10,7 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrls: ['./student-list.component.css'],
   standalone: true,
   imports: [CommonModule, HttpClientModule],
-  providers: [StudentService], // Ensure the service is provided here
+  providers: [StudentService], 
 })
 export class StudentListComponent implements OnInit {
   students: Student[] = [];
