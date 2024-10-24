@@ -1,19 +1,67 @@
-<div *ngIf="students && students.length">
-    <table>
+<div class="container">
+    <h2>Student Management</h2>
+
+    <!-- Add Student Form -->
+    <form (ngSubmit)="addStudent()" class="mb-3">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="newStudent.name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" class="form-control" id="age" [(ngModel)]="newStudent.age" name="age" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" [(ngModel)]="newStudent.email" name="email" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Student</button>
+    </form>
+
+    <!-- Update and Delete buttons beside the form -->
+    <form (ngSubmit)="updateStudent()" *ngIf="selectedStudent.id">
+        <h4>Edit Student</h4>
+        <div class="form-group">
+            <label for="editName">Name:</label>
+            <input type="text" class="form-control" id="editName" [(ngModel)]="selectedStudent.name" name="editName"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="editAge">Age:</label>
+            <input type="number" class="form-control" id="editAge" [(ngModel)]="selectedStudent.age" name="editAge"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="editEmail">Email:</label>
+            <input type="email" class="form-control" id="editEmail" [(ngModel)]="selectedStudent.email" name="editEmail"
+                required>
+        </div>
+        <button type="submit" class="btn btn-success">Update Student</button>
+    </form>
+
+    <div *ngIf="deleteId">
+        <button (click)="deleteStudent()" class="btn btn-danger mt-3">Confirm Delete</button>
+    </div>
+
+    <!-- Student List -->
+    <table class="table table-striped mt-3">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Name</th>
-                <th>Email</th>
                 <th>Age</th>
+                <th>Email</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let student of students">
-                <td>{{ student.id }}   </td>
                 <td>{{ student.name }}</td>
-                <td>{{ student.email }}</td>
                 <td>{{ student.age }}</td>
+                <td>{{ student.email }}</td>
+                <td>
+                    <button (click)="selectStudent(student)" class="btn btn-sm btn-warning">Edit</button>
+                    <button (click)="deleteId = student.id || ''" class="btn btn-sm btn-danger">Delete</button>
+                </td>
             </tr>
         </tbody>
     </table>
