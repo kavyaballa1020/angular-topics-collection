@@ -15,19 +15,4 @@ export class StudentService {
     return this.http.get<Student[]>(this.apiUrl);
   }
 
-  getStudentById(id: string): Observable<Student> {
-    return this.http.get<Student>(`${this.apiUrl}/${id}`);
-  }
-
-  createStudent(student: Student): Observable<Student> {
-    return this.http.post<Student>(this.apiUrl, student);
-  }
-
-  updateStudent(student: Student): Observable<Student> {
-    return this.http.put<Student>(this.apiUrl, student);
-  }
-
-  deleteStudent(id: string): Observable<string> {
-    return this.http.delete<string>(`${this.apiUrl}/${id}`);
-  }
 }

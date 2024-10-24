@@ -11,9 +11,7 @@ import { Component,Input,EventEmitter,Output } from '@angular/core';
 export class ChildComponent {
       @Input() data!:string;
 
-
       @Output() messageEvent = new EventEmitter<string>();
-
 
       sendmessage(){
         this.messageEvent.emit("Hello from child component")
@@ -22,5 +20,4 @@ export class ChildComponent {
       logmessage():string{
         return "Hello from the child component by using view message";
       }
-
 }

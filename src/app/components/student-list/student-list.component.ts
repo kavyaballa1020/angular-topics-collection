@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StudentService } from '../../services/students.service'; // Ensure correct path to service
+import { StudentService } from '../../services/students.service';
 import { Student } from '../../services/student.model';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';

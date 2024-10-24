@@ -10,6 +10,7 @@ import { Component, ViewChild } from '@angular/core';
   styleUrl: './parent.component.css'
 })
 export class ParentComponent {
+
       data:string="Hi Child i am your parent";
 
       message:string='';
@@ -23,7 +24,6 @@ export class ParentComponent {
 
       viewmessage:string=''
       ngAfterViewInit(){
-
       }
       callchildmethod(){
         this.viewmessage=this.childComponent.logmessage();
