@@ -14,7 +14,9 @@ import { NgforComponent } from './components/ngfor/ngfor.component';
 import { CustomerlistComponent } from './components/customer-list/customer-list.component';
 import { ParentComponent } from './components/parent/parent.component';
 import { StudentListComponent } from './components/student-list/student-list.component';
-
+import { EmployeeComponent } from './components/employee/employee.component';
+import { PracticeGuard } from './guards/practice.guard';
+import { PracticeComponent } from './components/practice/practice.component';
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   {
@@ -36,8 +38,10 @@ export const routes: Routes = [
       { path: 'ngStyle', component: NgstyleComponent }
     ]
   },
+  {path:'practice',component:PracticeComponent},
   { path: 'ngforloop', component: NgforComponent },
   { path: 'customer', component: CustomerlistComponent },
   { path: 'parent', component: ParentComponent },
-  { path: 'student', component: StudentListComponent }
+  { path: 'student', component: StudentListComponent },
+  {path:'employee',component:EmployeeComponent,canActivate:[PracticeGuard]}
 ];
