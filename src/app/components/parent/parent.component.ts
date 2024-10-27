@@ -11,13 +11,17 @@ import { Component, ViewChild } from '@angular/core';
 })
 export class ParentComponent {
 
+      //input
       data:string="Hi Child i am your parent";
 
+
+      //output
       message:string='';
 
       receiveMessage(event:string){
           this.message=event
       }
+
 
       @ViewChild (ChildComponent) childComponent!:ChildComponent;
 

@@ -5,7 +5,7 @@ import { CalculatorComponent } from './components/calculator/calculator.componen
 import { UserListComponent } from './components/user-list/user-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
-import { BindingComponent } from './components/binding/binding.component'; // Parent component
+import { BindingComponent } from './components/binding/binding.component'; 
 import { AuthGuard } from './guards/auth.guard';
 import { IfelseComponent } from './components/ifelse/ifelse.component';
 import { NgstyleComponent } from './components/ngstyle/ngstyle.component';
@@ -14,9 +14,9 @@ import { NgforComponent } from './components/ngfor/ngfor.component';
 import { CustomerlistComponent } from './components/customer-list/customer-list.component';
 import { ParentComponent } from './components/parent/parent.component';
 import { EmployeeComponent } from './components/employee/employee.component';
-import { PracticeGuard } from './guards/practice.guard';
-import { PracticeComponent } from './components/practice/practice.component';
 import { StudentComponent } from './components/student-list/student-list.component';
+import { MummyComponent } from './components/mummy/mummy.component';
+import { StudentGuard } from './guards/student.guard';
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   {
@@ -38,10 +38,9 @@ export const routes: Routes = [
       { path: 'ngStyle', component: NgstyleComponent }
     ]
   },
-  {path:'practice',component:PracticeComponent},
   { path: 'ngforloop', component: NgforComponent },
   { path: 'customer', component: CustomerlistComponent },
   { path: 'parent', component: ParentComponent },
-  { path: 'student', component: StudentComponent },
-  {path:'employee',component:EmployeeComponent,canActivate:[PracticeGuard]}
+  { path: 'student', component: StudentComponent,canActivate:[StudentGuard] },
+  {path:'mummy',component:MummyComponent}
 ];

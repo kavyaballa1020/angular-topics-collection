@@ -1,4 +1,6 @@
 <app-child (messageEvent)="receiveMessage($event)" [data]="data"></app-child>
+
+
 <button (click)="callchildmethod()">ViewChildMessage</button>
 <h1>Message from child : {{message}}</h1>
 <h1>{{viewmessage}}</h1>

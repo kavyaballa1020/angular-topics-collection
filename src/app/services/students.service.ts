@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Student } from '../models/student.model';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -29,5 +28,16 @@ export class StudentService {
 
   deleteStudent(id: string): Observable<string> {
     return this.http.delete<string>(`${this.apiUrl}/${id}`);
+  }
+  isauthenticated:boolean=false;
+  login(){
+    this.isauthenticated=true
+  }
+  logut(){
+    this.isauthenticated=false
+  }
+  isloggedin()
+  {
+    return this.isauthenticated;
   }
 }

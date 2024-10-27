@@ -4,6 +4,7 @@ import { Student } from '../../models/student.model';
 import { FormsModule, NgModel } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
+
 @Component({
   selector: 'app-student',
   templateUrl: './student-list.component.html',
