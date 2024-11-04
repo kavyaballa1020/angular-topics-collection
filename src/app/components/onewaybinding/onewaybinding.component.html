@@ -1,15 +1,16 @@
-<!-- INTERPOLATION -->
-<h1>INTERPOLATION</h1>
+<div class="container">
+    <!-- INTERPOLATION -->
+    <h1>INTERPOLATION</h1>
+    <p>Hello, I am {{ name }}</p>
 
-<p>Hello i am {{name}}</p>
+    <!-- PROPERTY BINDING -->
+    <h1>PROPERTY BINDING</h1>
+    <div class="image-container">
+        <img [src]="urlimage" alt="independent" />
+    </div>
 
-<!-- PROPERTY BINDING -->
-<h1>PROPERTY BINDING</h1>
-<img [src]="urlimage" alt="independent"/>
-
-<!-- EVENT BINDING -->
-
-<h1>EVENT BINDING</h1>
- <button [disabled]="isDisable">Hello</button>
- <button (click)="Disable()">Enable or Disable</button>
-
+    <!-- EVENT BINDING -->
+    <h1>EVENT BINDING</h1>
+    <button mat-raised-button color="primary" [disabled]="isDisable">Hello</button>
+    <button mat-raised-button color="accent" (click)="Disable()">Enable or Disable</button>
+</div>

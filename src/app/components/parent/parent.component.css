@@ -1,0 +1,20 @@
+.parent {
+    padding: 20px;
+    border: 2px solid #004d40;
+    border-radius: 8px;
+    background-color: #b2dfdb;
+}
+
+button {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004d40;
+}
